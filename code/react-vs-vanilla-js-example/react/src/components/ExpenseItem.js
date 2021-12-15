@@ -4,7 +4,7 @@ import './ExpenseItem.css';
 import Modal from './Modal';
 import ExpenseDate from './ExpenseDate';
 
-function ExpenseItem (props) {
+const ExpenseItem = (props) => {
   const [title, setTitle] = useState(props.title)
 
   const onClickHandler = () => {
@@ -17,7 +17,7 @@ function ExpenseItem (props) {
       <h2>{title}</h2>
       <div className="expense-item__price">{props.amount}</div>
       </div>
-      <button onClick={onClickHandler}>Add expense</button>
+      <button onClick={onClickHandler}>Change title</button>
     </div>
   );
 }
