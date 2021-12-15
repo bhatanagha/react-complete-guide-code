@@ -3,17 +3,17 @@ import ExpenseForm from './ExpenseForm'
 import { useState } from 'react'
 
 const NewExpense = (props) => {
+  const [ isEditing, setIsEditing ] = useState(false)
   const newExpenseDataFunc = (newExpense) => {
     const newEnteredData = {
-      ...newExpense,
-      id: Math.random().toString()
+      id: Math.random().toString(),
+      ...newExpense
     }
     console.log(newEnteredData)
     props.appendAllData(newEnteredData)
     setIsEditing(false)
   }
 
-  const [ isEditing, setIsEditing ] = useState(false)
 
   const setIsEditingHandler = () => {
     setIsEditing(true)
