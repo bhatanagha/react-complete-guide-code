@@ -41,8 +41,8 @@ const User = (props) => {
       <form>
     <div className="User">
        <div className="new-expense__control">
-            <label>Name</label> 
-            <input 
+            <label>Name</label>
+            <input
             className={`name-input ${!isValid ? 'invalid' : ''}`} type="text"
             //  value={name}
             //   onChange={nameChangeHandler}
